@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 
 Route::get("/read_chip",[\App\Http\Controllers\ReadChipController::class,"read_chip"])->name("read_chip");
+Route::get("/thong_ke",[\App\Http\Controllers\ReadChipController::class,"thong_ke_chip"]);

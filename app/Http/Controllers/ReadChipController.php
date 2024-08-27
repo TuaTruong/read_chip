@@ -57,6 +57,12 @@ class ReadChipController extends Controller
         } catch (\Exception $exception){
             return "fail";
         }
+    }
 
+    public function thong_ke_chip(Request $request){
+        $currentDay = Date::firstOrCreate(["date"=>date('d-m-Y')]);
+
+        $all_phones = $currentDay->phones;
+        return view("thong_ke",compact("all_phones","currentDay"));
     }
 }
